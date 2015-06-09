@@ -103,8 +103,9 @@ html {
     font-size: 28px;
     line-height: 27px;
     color: #fff;
-    background-color: #315F77;
+    background-color: #5075aa;
     border: 1px solid transparent;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, .01), inset 0 0 0 1px rgba(255, 255, 255, .01), inset 0 -60px 60px -40px rgba( 0, 0, 0, .3);
 }
 
 .social .btn i {
@@ -112,8 +113,8 @@ html {
 }
 
 .social .btn:hover {
-    color: #fff;
-    background-color: #397d98;
+    background-color: #5387be;
+    transition: background-color .3s ease;
 }
 
 .social .group {

@@ -2,19 +2,48 @@
     box-sizing: border-box;
 }
 
+@media screen and (orientation: portrait) {
+    html {
+        background-image: url(/images/bg-720.jpg);
+    }
+}
+
+@media screen and (max-width: 1280px) and (orientation: landscape) {
+    html {
+        background-image: url(/images/bg-1280.jpg);
+    }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1366px) {
+    html {
+        background-image: url(/images/bg-1366.jpg);
+    }
+}
+
+@media screen and (min-width: 1367px) and (max-width: 1920px) {
+    html {
+        background-image: url(/images/bg-1920.jpg);
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    html {
+        background-image: url(/images/bg-2560.jpg);
+    }
+}
+
 html {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background: #000 url(../images/bg.jpg) no-repeat fixed center center;
+    height: 100%;
 }
 
-body {
-    background-color: transparent;
-}
-
-#bio {
+.bio {
     max-width: 550px;
     background: rgba(0, 0, 0, .6);
     border-radius: 4px;
@@ -24,18 +53,18 @@ body {
     padding: 20px;
 }
 
-#avatar {
+.avatar {
     width: 150px;
     height: 150px;
     border-radius: 75px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    background: url(../images/avatar.jpg) no-repeat;
+    background: url(/images/avatar.jpg) no-repeat;
     box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 }
 
-#name {
+.name {
     text-align: center;
     font-size: 48px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -43,7 +72,7 @@ body {
     margin: 0 0 5px;
 }
 
-#tagline {
+.tagline {
     text-align: center;
     font-size: 18px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -51,37 +80,42 @@ body {
     margin: 0 0 5px;
 }
 
-#location {
+.location {
     text-align: center;
     font-size: 16px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #fff;
 }
 
-#social {
+.social {
     text-align: center;
+    font-size: 0;
 }
 
-#social a {
+.social .btn {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
     border-radius: 4px;
     width: 48px;
     height: 48px;
-    margin: 2px;
-    font-size: 1.8em;
-    line-height: 1.7em;
+    margin: 3px;
+    font-size: 28px;
+    line-height: 27px;
     color: #fff;
     background-color: #315F77;
     border: 1px solid transparent;
 }
 
-#social div {
-    display: inline-block;
+.social .btn i {
+    line-height: 48px;
 }
 
-#social a:hover {
+.social .btn:hover {
     color: #fff;
     background-color: #397d98;
+}
+
+.social .group {
+    display: inline-block;
 }
